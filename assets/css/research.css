@@ -1,0 +1,45 @@
+.section-title p {
+  border-bottom-right-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-top-right-radius: 0rem;
+  border-top-left-radius: 0rem;
+}
+
+.section-title h2 {
+  border-radius: 0.4rem;
+}
+
+.container {
+  background-image: url(/images/gradient.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.membership-section {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.membership-card {
+  max-width: 15rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+.membership-card a {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.year {
+  color: coral;
+}

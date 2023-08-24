@@ -1,0 +1,30 @@
+.project {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.project img {
+  width: min(15rem, 90%);
+}
+
+.project .content {
+  width: min(40rem, 90%);
+}
+
+.project h2 {
+  margin-bottom: 1rem;
+}
+
+.project span {
+  font-weight: bold;
+}
+
+.project p {
+  color: aliceblue;
+}
+
+.project p:nth-last-child(1) {
+  margin-top: 1rem;
+}

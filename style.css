@@ -36,7 +36,6 @@ body {
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
   background-color: var(--primary_clr);
-  display: flex;
 }
 
 img,
@@ -57,7 +56,6 @@ a {
 }
 
 .container {
-  /* margin-inline: auto; */
   margin-left: 18rem;
   padding-inline: 1rem;
 }
@@ -89,6 +87,7 @@ a {
 
 .sidebar {
   position: fixed;
+  top: 0;
   width: 18rem;
   justify-content: space-evenly;
   padding: 2rem;

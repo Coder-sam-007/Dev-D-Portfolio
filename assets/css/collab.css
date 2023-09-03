@@ -16,3 +16,9 @@
 .prof-detail {
   color: white;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}

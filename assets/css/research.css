@@ -73,3 +73,19 @@
 .btn-groups a {
   cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+  .membership-card {
+    max-width: 100%;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 1rem;
+  }
+
+  .section-title {
+    margin: 1rem 0;
+  }
+}

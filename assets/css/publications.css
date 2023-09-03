@@ -32,3 +32,13 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .books-container {
+    margin: 0;
+  }
+}

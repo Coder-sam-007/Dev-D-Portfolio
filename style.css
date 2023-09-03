@@ -168,13 +168,13 @@ header ul {
 }
 
 .hero_content {
-  width: min(40rem, 90%);
+  width: min(calc(20vw + 15rem), 90%);
   color: white;
   font-family: var(--ff-primary);
 }
 
 .hero_content h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 1.5882rem + 1.8824vw, 3rem);
   line-height: 1.1;
   margin-block: 2.5rem 1rem;
 }
@@ -217,7 +217,7 @@ header ul {
 }
 
 .about_content {
-  width: min(35rem, 90%);
+  width: min(calc(18vw + 11.5rem), 90%);
   color: white;
 }
 
@@ -259,6 +259,8 @@ header ul {
   justify-content: space-between;
   background-size: cover;
   z-index: 0;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 
 .card h2,
@@ -462,10 +464,51 @@ header ul {
   margin: 1em 0px 0px 0.75em;
 }
 
+/* quote */
+
+.quote {
+  background: rgba(242, 252, 252, 0.36);
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 37px 0px;
+}
+
+.quote i {
+  font-size: 5rem;
+  opacity: 0.4;
+  color: var(--secondary-clr);
+}
+
+.quote p:last-child {
+  text-align: right;
+}
+
 @media screen and (max-width: 660px) {
+  .card {
+    width: 90%;
+  }
+
+  .quote {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .quote p:last-child {
+    margin-top: 1rem;
+  }
+
+  .quote i {
+    font-size: 3;
+  }
   .timeline {
-    width: 100%;
+    width: 90%;
     padding: 4em 0px 1em;
+    margin: 0 auto;
   }
 
   .timeline li {
@@ -492,7 +535,7 @@ header ul {
   .direction-r .flag::before {
     position: absolute;
     top: -30px;
-    left: 50%;
+    left: 50.9%;
     content: " ";
     display: block;
     width: 12px;
@@ -560,27 +603,6 @@ header ul {
   }
 }
 
-.quote {
-  background: rgba(242, 252, 252, 0.36);
-  padding: 2rem;
-  margin: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  border-radius: 0.4rem;
-  backdrop-filter: blur(10px);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 37px 0px;
-}
-
-.quote i {
-  font-size: 5rem;
-  opacity: 0.4;
-  color: var(--secondary-clr);
-}
-
-.quote p:last-child {
-  text-align: right;
-}
-
 .slider {
   position: relative;
   max-width: 40rem;
@@ -613,4 +635,44 @@ header ul {
 
 .slider i {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1220px) {
+  .sidebar {
+    display: none;
+  }
+
+  .container {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  header ul {
+    display: none;
+  }
+
+  .hero_content,
+  .about_content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slider {
+    margin-inline: 1rem;
+  }
+
+  header {
+    margin-inline: 0;
+  }
+  .container {
+    padding-inline: 0.4rem;
+  }
 }

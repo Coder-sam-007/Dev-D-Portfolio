@@ -8,6 +8,9 @@ let swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  autoplay: {
+    delay: 3000,
+  },
   mousewheel: true,
   keyboard: true,
 });

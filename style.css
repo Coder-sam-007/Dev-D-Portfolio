@@ -314,7 +314,7 @@ header.active .bar::after {
   position: relative;
   min-height: 15rem;
   padding: 1rem;
-  width: min(calc(12vw + 10rem), 90%);
+  width: min(calc(12vw + 8rem), 90%);
   color: white;
   display: flex;
   flex-direction: column;
@@ -714,7 +714,7 @@ header.active .bar::after {
     display: flex;
   }
 
-  nav {
+  .nav-bar {
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -723,8 +723,9 @@ header.active .bar::after {
     top: -1rem;
     padding: 4rem;
     text-align: center;
-    background: linear-gradient(45deg, rgb(62, 143, 222), rgb(0, 219, 180));
+    background: linear-gradient(45deg, rgb(79 143 191), rgb(63 247 243));
     transition: all 0.5s ease 0s;
+    z-index: 10;
   }
 
   header {
@@ -755,6 +756,10 @@ header.active .bar::after {
   .hero_content,
   .about_content {
     width: 90%;
+  }
+
+  .container {
+    overflow-x: hidden;
   }
 }
 

@@ -139,6 +139,10 @@ a {
   margin-bottom: 1rem;
 }
 
+#side-social {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -146,7 +150,7 @@ header {
   border-radius: 3.125rem;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 37px 0px;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   margin: 1rem;
   padding-inline-end: 4rem;
 }
@@ -163,6 +167,14 @@ header h1 {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 37px 0px;
   backdrop-filter: blur(20px);
+}
+
+.cross-btn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  scale: 2;
+  display: none;
 }
 
 .menu-btn {
@@ -211,10 +223,12 @@ header.active .menu-btn .bar {
 
 header.active .bar::before {
   transform: translateY(0px) rotate(-45deg);
+  background: transparent;
 }
 
 header.active .bar::after {
   transform: translateY(0px) rotate(45deg);
+  background: transparent;
 }
 
 .hero-section {
@@ -710,7 +724,8 @@ header.active .bar::after {
 }
 
 @media screen and (max-width: 870px) {
-  .menu-btn {
+  .menu-btn,
+  .cross-btn {
     display: flex;
   }
 
@@ -720,7 +735,7 @@ header.active .bar::after {
     width: 100%;
     max-width: 400px;
     right: -125%;
-    top: -1rem;
+    top: 0;
     padding: 4rem;
     text-align: center;
     background: linear-gradient(45deg, rgb(79 143 191), rgb(63 247 243));
@@ -731,20 +746,20 @@ header.active .bar::after {
   header {
     padding-inline-end: 1rem;
   }
-  header.active nav {
-    right: -2rem;
+  header.active .nav-bar {
+    right: 0;
   }
 
-  nav li {
+  .nav-bar li {
     margin-top: 2rem;
   }
 
-  nav li a {
+  .nav-bar li a {
     font-size: 23px;
     margin-left: -100%;
   }
 
-  header.active nav li a {
+  header.active .nav-bar li a {
     margin-left: 0px;
   }
 
@@ -760,6 +775,15 @@ header.active .bar::after {
 
   .container {
     overflow-x: hidden;
+  }
+
+  #side-social {
+    display: block;
+  }
+
+  #side-social > .social_bar {
+    gap: 2rem;
+    margin-top: 2rem;
   }
 }
 

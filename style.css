@@ -1,3 +1,19 @@
+
+
+/* remove this...  */
+
+body{
+  display:grid!important;
+  place-items:center;
+}
+
+ h1{
+   font-size: 4rem!important;
+ }
+
+/* *********** */
+
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600&display=swap");
 :root {
   --primary_clr: #4f8fbf;

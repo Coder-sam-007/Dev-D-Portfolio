@@ -5,9 +5,11 @@
 body{
   display:grid!important;
   place-items:center;
+  min-height:100vh;
 }
 
  h1{
+   color:white;
    font-size: 4rem!important;
  }
 
